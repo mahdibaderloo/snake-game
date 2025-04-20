@@ -69,6 +69,7 @@ body {
   height: 150px;
   position: relative;
   margin-top: 1rem;
+  display: none;
 }
 
 #up {
@@ -120,4 +121,10 @@ body {
 
 .right-icon {
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 620px) {
+  .buttons {
+    display: inline-block;
+  }
 }
