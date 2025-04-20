@@ -53,7 +53,7 @@ body {
   gap: 1rem;
 }
 
-button {
+.new-game {
   border: none;
   background-color: #3e3e3e;
   color: #ffffff;
@@ -62,4 +62,62 @@ button {
   font-family: monospace;
   font-size: 20px;
   cursor: pointer;
+}
+
+.buttons {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+#up {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+#left {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+#down {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
+
+#right {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  /* border: 3px solid #3e3e3e94; */
+  box-shadow: 0 0 2px #3e3e3e;
+  background-color: #3e3e3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon {
+  width: 20px;
+}
+
+.left-icon {
+  transform: rotate(-90deg);
+}
+
+.down-icon {
+  transform: rotate(180deg);
+}
+
+.right-icon {
+  transform: rotate(90deg);
 }
