@@ -6,7 +6,8 @@ const score = document.querySelector(".score");
 const modal = document.querySelector(".modal");
 const modalCurrentScore = document.querySelector(".modal-current-score");
 const modalHighScore = document.querySelector(".modal-high-score");
-const newGameBtn = document.querySelector("button");
+const newGameBtn = document.querySelector(".new-game");
+const buttons = document.querySelectorAll(".button");
 
 let scale = 10;
 let row = canvas.width / scale;
@@ -167,5 +168,12 @@ window.addEventListener("load", () => {
   window.addEventListener("keydown", (event) => {
     let userDirection = event.key.replace("Arrow", "");
     snake.updateDirection(userDirection);
+  });
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      console.log(e.target.dataset.arrow);
+      snake.updateDirection(e.target.dataset.arrow);
+    });
   });
 });
